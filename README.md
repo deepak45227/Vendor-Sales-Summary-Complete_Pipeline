@@ -47,13 +47,60 @@ It creates a seamless **ETL (Extract–Transform–Load)** pipeline using **Pyth
 ## 📂 Project Structure
 Vendor-Sales-Summary/
 │
-├── ingestion.py # Script for data extraction and ingestion from SQL
-├── get_vendor_summary.py # Function to aggregate and summarize vendor data
+├── ingestion_db.py # Python script for fetching and loading raw data from SQL
+├── get_vendor_summery.py # Builds summarized vendor sales table and saves back to SQL
+│
 ├── notebooks/
-│ └── vendor_eda.ipynb # Jupyter notebook for exploratory data analysis
-├── powerbi_dashboard/ # Power BI report files (.pbix)
+│ ├── Exploratory_data_analysis.ipynb # EDA on cleaned vendor sales data
+│ ├── vendor_performance_analysis.ipynb # In-depth vendor performance visualization & metrics
+│ └── Untitled.ipynb # Temporary or test notebook
+│
 ├── data/
-│ └── 
-├── requirements.txt # List of Python dependencies
-└── README.md # Project documentation
-|__vrndor-sales-summary-report.pdf
+│ ├── begin_inventory.csv # Opening stock for each product/vendor
+│ ├── end_inventory.csv # Closing stock for each product/vendor
+│ ├── sales.csv # Sales transactions with vendor and product details
+│ ├── vendor_invoice.csv # Vendor invoice and payment details
+│ ├── purchase_price.csv # Purchase price per product/vendor
+│ └── purchases.csv # Vendor purchase records
+│
+├── vensor-sales.pbix # Power BI dashboard visualizing vendor summary insights
+├── Vendor-Sales-Summeryreport.pdf # Final project report and analysis summary
+├── gradient-abstract-wireframe-background.jpg # Dashboard/Report background image
+└── README.md # Project documentation (this file)
+
+
+
+---
+
+## ⚙️ How It Works
+1. **Run `ingestion.py`** to fetch raw data from SQL and perform basic cleaning.  
+2. **Execute `get_vendor_summary()`** to build the final summary table and store it back in SQL.  
+3. **Open `vendor_eda.ipynb`** to explore and analyze key sales trends.  
+4. **Load the processed data in Power BI** to visualize and generate the Vendor Sales Summary Dashboard.
+
+---
+
+## 📊 Results
+- Automated the vendor data pipeline and eliminated manual aggregation.
+- Improved accuracy and speed of generating sales reports.
+- Delivered interactive dashboards for real-time sales monitoring and vendor performance evaluation.
+
+---
+
+## 💡 Future Enhancements
+- Integrate scheduling with **Airflow or Cron** for periodic data refresh.  
+- Add **real-time dashboard updates** using APIs.  
+- Incorporate **forecasting models** for vendor sales prediction.
+
+---
+
+## 👨‍💻 Author
+**Dee Y**  
+_Data Analyst & Developer passionate about building intelligent, automated data systems._  
+📧 deepak045227@gmail.com
+
+---
+
+## 🪪 License
+This project is released under the MIT License. Feel free to use and modify with credit.
+
