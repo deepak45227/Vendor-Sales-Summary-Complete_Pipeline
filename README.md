@@ -47,26 +47,27 @@ It creates a seamless **ETL (Extract–Transform–Load)** pipeline using **Pyth
 ## 📂 Project Structure
 Vendor-Sales-Summary/
 │
-├── ingestion_db.py # Python script for fetching and loading raw data from SQL
-├── get_vendor_summery.py # Builds summarized vendor sales table and saves back to SQL
+├── ingestion_db.py                      # Script to fetch and load raw data from SQL
+├── get_vendor_summery.py                # Aggregates and summarizes vendor sales data
 │
 ├── notebooks/
-│ ├── Exploratory_data_analysis.ipynb # EDA on cleaned vendor sales data
-│ ├── vendor_performance_analysis.ipynb # In-depth vendor performance visualization & metrics
-│ └── Untitled.ipynb # Temporary or test notebook
+│   ├── Exploratory_data_analysis.ipynb  # Exploratory Data Analysis on cleaned sales data
+│   ├── vendor_performance_analysis.ipynb# Detailed vendor performance and insights
+│   └── Untitled.ipynb                   # Temporary / test notebook
 │
 ├── data/
-│ ├── begin_inventory.csv # Opening stock for each product/vendor
-│ ├── end_inventory.csv # Closing stock for each product/vendor
-│ ├── sales.csv # Sales transactions with vendor and product details
-│ ├── vendor_invoice.csv # Vendor invoice and payment details
-│ ├── purchase_price.csv # Purchase price per product/vendor
-│ └── purchases.csv # Vendor purchase records
+│   ├── begin_inventory.csv              # Opening stock for each vendor/product
+│   ├── end_inventory.csv                # Closing stock for each vendor/product
+│   ├── sales.csv                        # Sales transaction details
+│   ├── vendor_invoice.csv               # Vendor invoice and billing details
+│   ├── purchase_price.csv               # Product purchase price information
+│   └── purchases.csv                    # Purchase transaction records
 │
-├── vensor-sales.pbix # Power BI dashboard visualizing vendor summary insights
-├── Vendor-Sales-Summeryreport.pdf # Final project report and analysis summary
-├── gradient-abstract-wireframe-background.jpg # Dashboard/Report background image
-└── README.md # Project documentation (this file)
+├── vensor-sales.pbix                    # Power BI dashboard for vendor sales summary
+├── Vendor-Sales-Summeryreport.pdf       # Final summarized report of analysis
+├── gradient-abstract-wireframe-background.jpg  # Dashboard/report background
+└── README.md                            # Project documentation
+
 
 
 
